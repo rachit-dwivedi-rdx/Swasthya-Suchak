@@ -1,4 +1,45 @@
-:root {
+:root[data-theme="neon"] {
+  --font-size: 16px;
+  --background: #05081a;
+  --foreground: #f0f4ff;
+  --card: rgba(255,255,255,0.04);
+  --card-foreground: #f0f4ff;
+  --popover: #0d1130;
+  --popover-foreground: #f0f4ff;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --secondary: rgba(139,92,246,0.15);
+  --secondary-foreground: #c4b5fd;
+  --muted: rgba(255,255,255,0.06);
+  --muted-foreground: #94a3b8;
+  --accent: rgba(59,130,246,0.15);
+  --accent-foreground: #93c5fd;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255,255,255,0.08);
+  --input: transparent;
+  --input-background: rgba(255,255,255,0.05);
+  --switch-background: rgba(255,255,255,0.15);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: rgba(59,130,246,0.5);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.75rem;
+  --sidebar: #0a0f28;
+  --sidebar-foreground: #f0f4ff;
+  --sidebar-primary: #3b82f6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(59,130,246,0.1);
+  --sidebar-accent-foreground: #93c5fd;
+  --sidebar-border: rgba(255,255,255,0.08);
+  --sidebar-ring: rgba(59,130,246,0.5);
+}
+
+:root[data-theme="pink"] {
   --font-size: 16px;
   --background: #fff5f7;
   --foreground: #1a0a10;
@@ -38,8 +79,6 @@
   --sidebar-border: rgba(220,31,63,0.15);
   --sidebar-ring: rgba(220,31,63,0.40);
 }
-
-
 
 @theme inline {
   --color-background: var(--background);
@@ -89,12 +128,8 @@
 
   body {
     @apply bg-background text-foreground;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
-
-  /**
-  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
-  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
-  */
 
   html {
     font-size: var(--font-size);
