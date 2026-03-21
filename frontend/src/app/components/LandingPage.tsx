@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import { motion } from "motion/react";
 import { ArrowRight, Shield, Globe, Zap, CheckCircle, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import { AuthModal } from "./AuthModal";
+import logo from "../../logo.jpeg";
 
 function HealthMedicalBackground() {
   const interactiveRef = useRef<HTMLDivElement>(null);
@@ -168,7 +169,7 @@ export function LandingPage() {
         }}
       >
         <div className="flex items-center gap-3">
-          <img src="/src/logo.jpeg" alt="Swasthya Suchak" className="size-14 rounded-xl object-cover" style={{ boxShadow: "0 4px 16px rgba(220,31,63,0.30)" }} />
+          <img src={logo} alt="Swasthya Suchak" className="size-14 rounded-xl object-cover" style={{ boxShadow: "0 4px 16px rgba(220,31,63,0.30)" }} />
           <span className="text-xl font-bold bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(135deg, #dc1f3f 0%, #e85d78 100%)" }}>
             Swasthya Suchak
           </span>
@@ -190,7 +191,7 @@ export function LandingPage() {
 
           <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="flex flex-col items-center mb-8">
             <div className="rounded-2xl p-1 mb-2" style={{ background: "rgba(255,255,255,0.85)", boxShadow: "0 8px 32px rgba(220,31,63,0.22)" }}>
-              <img src="/src/logo.jpeg" alt="Swasthya Suchak" className="w-52 rounded-xl object-contain" />
+              <img src={logo} alt="Swasthya Suchak" className="w-52 rounded-xl object-contain" />
             </div>
           </motion.div>
 
