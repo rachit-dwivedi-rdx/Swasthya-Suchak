@@ -11,7 +11,10 @@ A bilingual AI health assistant that works on both Web and WhatsApp. You can get
 ![Chat Interface](screenshots/chat-interface.png)
 
 ### Chat
-![PDF Upload](screenshots/chat.png)
+![Chat](screenshots/chat.png)
+
+### Whatsapp Chatbot
+![whatsapp-Chat Interface](screenshots/Whatsapp-Chatbot.jpeg)
 
 ## Features
 
