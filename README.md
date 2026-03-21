@@ -2,6 +2,17 @@
 (This is a group project of 4 members in Hackathon )
 A bilingual AI health assistant that works on both Web and WhatsApp. You can get instant health advice, analyze medical images, and upload reports for analysis.
 
+## Screenshots
+
+### Landing Page
+![Landing Page](screenshots/landing-page.png)
+
+### Chat Interface
+![Chat Interface](screenshots/chat-interface.png)
+
+### Chat
+![PDF Upload](screenshots/chat.png)
+
 ## Features
 
 - Web Chat and WhatsApp Bot
