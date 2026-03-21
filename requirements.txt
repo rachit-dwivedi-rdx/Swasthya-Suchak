@@ -10,3 +10,4 @@ tensorflow
 numpy
 sentence-transformers
 faiss-cpu
+gunicorn
