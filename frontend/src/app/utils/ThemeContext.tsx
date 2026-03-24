@@ -12,7 +12,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
     const saved = localStorage.getItem("healthbot_theme");
-    return (saved as Theme) || "neon"; // Default to neon
+    return (saved as Theme) || "pink"; // Default to pink (light theme)
   });
 
   useEffect(() => {
