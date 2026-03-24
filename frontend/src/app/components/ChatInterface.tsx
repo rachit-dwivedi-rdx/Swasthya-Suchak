@@ -388,9 +388,9 @@ export function ChatInterface() {
                 <p className="text-sm md:text-base text-muted-foreground mb-6 md:mb-8">Describe your symptoms and I'll provide guidance</p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3 max-w-3xl mx-auto mb-8">
                   {[
-                    "https://www.youtube.com/embed/q5egJZ0Jvfg",
-                    "https://www.youtube.com/embed/P3GfsMwVo9g",
-                    "https://www.youtube.com/embed/sYnhRZxbvYA",
+                    "https://www.youtube-nocookie.com/embed/q5egJZ0Jvfg",
+                    "https://www.youtube-nocookie.com/embed/P3GfsMwVo9g",
+                    "https://www.youtube-nocookie.com/embed/sYnhRZxbvYA",
                   ].map((src, i) => (
                     <div key={i} className="rounded-xl overflow-hidden border border-border aspect-video">
                       <iframe src={src} className="w-full h-full" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
