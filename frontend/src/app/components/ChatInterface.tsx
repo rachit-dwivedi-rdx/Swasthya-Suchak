@@ -9,6 +9,7 @@ import { toast } from "sonner";
 import { api, Message, Conversation } from "../utils/api";
 import { ThemeToggle } from "./ThemeToggle";
 import { DualThemeBackground } from "./DualThemeBackground";
+import logo from "../../logo.jpeg";
 
 interface BotMessage extends Message {
   followUpQuestions?: string[];
@@ -285,7 +286,7 @@ export function ChatInterface() {
           >
             <div className="flex items-center justify-between px-3 py-3 border-b border-border">
               <div className="flex items-center gap-2">
-                <img src="/src/logo.jpeg" alt="Logo" className="size-6 rounded-lg" />
+                <img src={logo} alt="Logo" className="size-6 rounded-lg" />
                 <span className="font-bold text-sm bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
                   Swasthya Suchak
                 </span>
@@ -382,7 +383,7 @@ export function ChatInterface() {
           <div className="max-w-3xl mx-auto space-y-3 md:space-y-4">
             {messages.length === 0 ? (
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center py-8 md:py-16">
-                <img src="/src/logo.jpeg" alt="Logo" className="size-16 md:size-20 rounded-2xl shadow-xl object-cover mx-auto mb-4 md:mb-5" />
+                <img src={logo} alt="Logo" className="size-16 md:size-20 rounded-2xl shadow-xl object-cover mx-auto mb-4 md:mb-5" />
                 <h2 className="text-xl md:text-2xl font-bold mb-2">How can I help you today?</h2>
                 <p className="text-sm md:text-base text-muted-foreground mb-6 md:mb-8">Describe your symptoms and I'll provide guidance</p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3 max-w-3xl mx-auto mb-8">
@@ -411,7 +412,7 @@ export function ChatInterface() {
                   <motion.div key={message.id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
                     className={`flex gap-2 md:gap-3 ${message.role === "user" ? "justify-end" : "justify-start"}`}>
                     {message.role === "assistant" && (
-                      <img src="/src/logo.jpeg" alt="Bot" className="size-7 md:size-9 rounded-xl object-cover shrink-0 shadow-lg" />
+                      <img src={logo} alt="Bot" className="size-7 md:size-9 rounded-xl object-cover shrink-0 shadow-lg" />
                     )}
                     <div className={`max-w-[85%] md:max-w-[75%] rounded-2xl px-3 md:px-4 py-2 md:py-3 ${
                       message.role === "user"
@@ -456,7 +457,7 @@ export function ChatInterface() {
 
             {isLoading && (
               <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex gap-2 md:gap-3">
-                <img src="/src/logo.jpeg" alt="Bot" className="size-7 md:size-9 rounded-xl object-cover shrink-0 shadow-lg" />
+                <img src={logo} alt="Bot" className="size-7 md:size-9 rounded-xl object-cover shrink-0 shadow-lg" />
                 <div className="bg-card/70 backdrop-blur-sm border border-border rounded-2xl px-3 md:px-4 py-2 md:py-3 flex items-center gap-2">
                   <div className="text-xs font-semibold text-primary mr-1">Swasthya Suchak</div>
                   <Loader2 className="size-4 animate-spin text-primary" />

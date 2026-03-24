@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { X, Mail, Lock, User, Stethoscope, MessageCircle, Monitor } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
+import logo from "../../logo.jpeg";
 
 interface AuthModalProps {
   onClose: () => void;
@@ -66,7 +67,7 @@ export function AuthModal({ onClose, onSuccess }: AuthModalProps) {
 
             {/* Logo */}
             <div className="flex items-center gap-3 mb-6">
-              <img src="/src/logo.jpeg" alt="Swasthya Suchak" className="h-10 object-contain" />
+              <img src={logo} alt="Swasthya Suchak" className="h-10 object-contain" />
             </div>
 
             {view === "auth" ? (
