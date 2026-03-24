@@ -38,8 +38,7 @@ export function AuthModal({ onClose, onSuccess }: AuthModalProps) {
   };
 
   const handleWhatsApp = () => {
-    onSuccess(loggedInUser);
-    window.open("https://wa.me/14155238886?text=Hi", "_blank");
+    toast.error("WhatsApp integration requires paid plan. Please use Web Chat.");
   };
 
   const inputClass = "w-full bg-input-background border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-xl px-4 py-3 text-foreground placeholder:text-muted-foreground outline-none transition-all text-sm";
@@ -140,14 +139,18 @@ export function AuthModal({ onClose, onSuccess }: AuthModalProps) {
 
                   <button
                     onClick={handleWhatsApp}
-                    className="w-full flex items-center gap-4 p-4 bg-green-500/10 hover:bg-green-500/20 border border-green-500/20 hover:border-green-500/40 rounded-xl transition-all duration-200 text-left group"
+                    className="w-full flex items-center gap-4 p-4 bg-muted/50 border border-border rounded-xl transition-all duration-200 text-left group opacity-60 cursor-not-allowed relative"
+                    disabled
                   >
-                    <div className="bg-green-500 p-2.5 rounded-lg shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="bg-green-500/50 p-2.5 rounded-lg shrink-0">
                       <MessageCircle className="size-5 text-white" />
                     </div>
-                    <div>
-                      <p className="font-semibold">Continue on WhatsApp</p>
-                      <p className="text-xs text-muted-foreground mt-0.5">Opens WhatsApp with Swasthya Suchak bot</p>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2">
+                        <p className="font-semibold">Continue on WhatsApp</p>
+                        <span className="text-xs bg-yellow-500/20 text-yellow-700 dark:text-yellow-400 px-2 py-0.5 rounded-full font-medium border border-yellow-500/30">Paid</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground mt-0.5">Requires premium subscription</p>
                     </div>
                   </button>
                 </div>
