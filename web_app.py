@@ -399,6 +399,11 @@ def home():
     return "Swasthya Suchak Web API Running"
 
 
+@app.route("/health", methods=["GET"])
+def health_check():
+    return jsonify({"status": "ok", "service": "Swasthya Suchak"}), 200
+
+
 @app.route("/api-status", methods=["GET"])
 def api_status():
     """Check Groq API status and usage"""

@@ -10,6 +10,7 @@ import { api, Message, Conversation } from "../utils/api";
 import { ThemeToggle } from "./ThemeToggle";
 import { DualThemeBackground } from "./DualThemeBackground";
 import logo from "../../logo.jpeg";
+import { ensureBackendAwake } from "../utils/backendWake";
 
 interface BotMessage extends Message {
   followUpQuestions?: string[];
@@ -54,7 +55,11 @@ export function ChatInterface() {
     const username = localStorage.getItem("healthbot_user");
     if (!username) { navigate("/"); return; }
     setUser(username);
-    loadConversations(username);
+    
+    // Wake backend on mount
+    ensureBackendAwake().then(() => {
+      loadConversations(username);
+    });
     
     const savedActiveId = localStorage.getItem("active_conversation_id");
     if (!savedActiveId) {
