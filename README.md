@@ -5,7 +5,7 @@ A bilingual AI health assistant that works on both Web and WhatsApp. You can get
 # Demo
 ## [Live Demo](https://swasthya-suchak-frontend.onrender.com)
 
-If AI not works start server and wait until ##Swasthya Suchak Web API Running Shows
+If AI not works start server and wait until it show-- ### Swasthya Suchak Web API Running 
 ## [Start Server](https://swasthya-suchak.onrender.com/)
 
 ## Screenshots
